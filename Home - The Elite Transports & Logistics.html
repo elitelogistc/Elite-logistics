@@ -12,95 +12,378 @@
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- Canonical & RSS Feeds -->
+    <!-- Canonical & Meta -->
     <link rel="canonical" href="https://elitelogistic.xo.je/">
-    <link rel="alternate" type="application/rss+xml" title="The Elite Transports & Logistics &raquo; Feed" href="https://elitelogistic.xo.je/feed/">
-    <link rel="alternate" type="application/rss+xml" title="The Elite Transports & Logistics &raquo; Comments Feed" href="https://elitelogistic.xo.je/comments/feed/">
-
-    <!-- Open Graph (Facebook / Social Sharing) -->
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Home - The Elite Transports & Logistics">
-    <meta property="og:description" content="Reliable Truck Dispatch & Logistics Services Helping Owner-Operators & Trucking Fleets Find High-Paying Loads Across the USA.">
+    <meta property="og:description" content="Reliable Truck Dispatch & Logistics Services Helping Owner-Operators & Trucking Fleets Find High-Paying Loads Across the USA. Call (307) 215-9501">
     <meta property="og:url" content="https://elitelogistic.xo.je/">
     <meta property="og:site_name" content="The Elite Transports & Logistics">
-    <meta property="og:image" content="https://elitelogistic.xo.je/wp-content/uploads/2018/11/quote-1.png">
-    <meta property="og:image:width" content="200">
-    <meta property="og:image:height" content="154">
-    <meta property="og:image:type" content="image/png">
-    <meta property="article:modified_time" content="2026-07-29T23:35:32+00:00">
 
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Home - The Elite Transports & Logistics">
-    <meta name="twitter:description" content="Reliable Truck Dispatch & Logistics Services Helping Owner-Operators & Trucking Fleets Find High-Paying Loads Across the USA.">
-    <meta name="twitter:image" content="https://elitelogistic.xo.je/wp-content/uploads/2018/11/quote-1.png">
-
-    <!-- Structured Data (JSON-LD Schema) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": "https://elitelogistic.xo.je/#website",
-          "url": "https://elitelogistic.xo.je/",
-          "name": "The Elite Transports & Logistics",
-          "description": "Moving Freight with Reliability, Speed, and Excellence",
-          "publisher": { "@id": "https://elitelogistic.xo.je/#organization" }
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://elitelogistic.xo.je/#organization",
-          "name": "The Elite Transports & Logistics",
-          "url": "https://elitelogistic.xo.je/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://elitelogistic.xo.je/wp-content/uploads/2020/01/logo.png",
-            "width": 250,
-            "height": 70
-          }
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://elitelogistic.xo.je/",
-          "url": "https://elitelogistic.xo.je/",
-          "name": "Home - The Elite Transports & Logistics",
-          "isPartOf": { "@id": "https://elitelogistic.xo.je/#website" },
-          "primaryImageOfPage": { "@id": "https://elitelogistic.xo.je/#primaryimage" }
-        },
-        {
-          "@type": "ImageObject",
-          "@id": "https://elitelogistic.xo.je/#primaryimage",
-          "url": "https://elitelogistic.xo.je/wp-content/uploads/2018/11/quote-1.png",
-          "width": 200,
-          "height": 154
-        }
-      ]
-    }
-    </script>
-
-    <!-- Theme Stylesheet -->
-    <link rel="stylesheet" id="astra-theme-css-css" href="https://elitelogistic.xo.je/wp-content/themes/astra/assets/css/minified/main.min.css?ver=4.13.8" media="all">
-
-    <!-- Essential Layout Inline Styles -->
+    <!-- Styles -->
     <style>
         :root {
-            --ast-global-color-primary: #0274be;
-            --ast-global-color-secondary: #54595f;
-            --ast-normal-container-width: 1200px;
+            --primary-color: #0274be;
+            --primary-hover: #025a94;
+            --dark-color: #1a202c;
+            --light-bg: #f8fafc;
+            --text-color: #334155;
+            --text-muted: #64748b;
         }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: 'Noto Sans', sans-serif;
-            font-size: 16px;
-            line-height: 1.7em;
-            margin: 0;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #ffffff;
         }
-        h1, h2, h3, h4, h5, h6 {
+
+        h1, h2, h3, h4 {
             font-family: 'Montserrat', sans-serif;
+            color: var(--dark-color);
+        }
+
+        /* Header / Navbar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.15rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: -0.3px;
+            white-space: nowrap;
+        }
+
+        nav a {
+            margin-left: 1.2rem;
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .phone-link {
             font-weight: 700;
+            color: var(--dark-color);
+            text-decoration: none;
+            font-size: 1rem;
+            white-space: nowrap;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 0.7rem 1.4rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            white-space: nowrap;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+                        url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            color: #ffffff;
+            text-align: center;
+            padding: 6.5rem 1rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            color: #ffffff;
+            font-size: 2.75rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #e2e8f0;
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 5rem 8%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        /* Cards Grid with Images */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-body h3 {
+            margin-bottom: 0.75rem;
+            color: var(--primary-color);
+        }
+
+        .card-body p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Call-to-Action / Contact Banner */
+        .cta-banner {
+            background-color: var(--dark-color);
+            color: #ffffff;
+            text-align: center;
+            padding: 4rem 2rem;
+            border-radius: 16px;
+            margin: 3rem auto;
+            max-width: 1100px;
+        }
+
+        .cta-banner h2 {
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-banner p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 2rem;
+        }
+
+        .phone-button {
+            display: inline-block;
+            background-color: #22c55e;
+            color: #ffffff;
+            font-size: 1.3rem;
+            font-weight: 700;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .phone-button:hover {
+            background-color: #16a34a;
+            transform: scale(1.03);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: #94a3b8;
+            text-align: center;
+            padding: 3rem 1rem;
+            border-top: 1px solid #2d3748;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .header-phone {
+                flex-direction: row;
+                gap: 1rem;
+            }
+            .logo {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 1.05rem;
+                white-space: normal;
+                text-align: center;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- Header Section -->
+    <header>
+        <a href="#" class="logo">The Elite Transports & Logistics</a>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">Why Choose Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="header-phone">
+            <a href="tel:3072159501" class="phone-link">📞 (307) 215-9501</a>
+            <a href="tel:3072159501" class="btn">Call Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Reliable Truck Dispatch & Logistics Services</h1>
+            <p>Helping owner-operators and trucking fleets find high-paying loads across the USA with speed, reliability, and excellence.</p>
+            <a href="tel:3072159501" class="btn">Call (307) 215-9501 Today</a>
+        </div>
+    </section>
+
+    <!-- Services Section with Dispatch Images -->
+    <section class="section" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Truck Dispatching" class="card-img">
+                <div class="card-body">
+                    <h3>Truck Dispatching</h3>
+                    <p>We negotiate high-paying freight for Dry Vans, Reefers, and Flatbeds, keeping your wheels turning continuously.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=800&q=80" alt="Load Planning" class="card-img">
+                <div class="card-body">
+                    <h3>Load Planning & Route Optimization</h3>
+                    <p>Maximize profit margins and minimize empty deadhead miles with intelligent route planning and scheduling.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Broker Communication" class="card-img">
+                <div class="card-body">
+                    <h3>Broker Communication & Negotiation</h3>
+                    <p>We handle rate confirmations, setup packets, and top-dollar negotiations on your behalf 24/7.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section with Images -->
+    <section class="section" style="background-color: var(--light-bg);" id="about">
+        <h2 class="section-title">Why Choose Us?</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Dedicated Dispatchers" class="card-img">
+                <div class="card-body">
+                    <h3>Dedicated Dispatchers</h3>
+                    <p>Experienced logistics professionals working around the clock to provide personalized, 1-on-1 driver support.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1618042164219-62c820f10723?auto=format&fit=crop&w=800&q=80" alt="Maximum Profits" class="card-img">
+                <div class="card-body">
+                    <h3>Maximum Profit Opportunities</h3>
+                    <p>Top-tier load negotiation focused strictly on increasing your weekly gross revenue and keeping rates high.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Paperwork Handling" class="card-img">
+                <div class="card-body">
+                    <h3>Zero Paperwork Stress</h3>
+                    <p>No hidden fees, seamless rate confirmations, and clear communication every step of the journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action / Contact Section -->
+    <div class="cta-banner" id="contact">
+        <h2>Ready to Keep Your Trucks Loaded?</h2>
+        <p>Speak directly with our dispatch team to get high-paying loads today.</p>
+        <a href="tel:3072159501" class="phone-button">📞 Call Us: (307) 215-9501</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>The Elite Transports & Logistics</strong> | Phone: <a href="tel:3072159501" style="color:#ffffff; text-decoration:none;">(307) 215-9501</a></p>
+        <p style="margin-top: 0.5rem;">&copy; 2026 The Elite Transports & Logistics. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
